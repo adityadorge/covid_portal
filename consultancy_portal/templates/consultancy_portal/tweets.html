@@ -1,0 +1,19 @@
+{% extends 'consultancy_portal/base.html' %}
+{% block content %}
+  <body>
+     <table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col">Tweets</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for tweet in tweets_copy%}
+    <tr>    
+      <td>{{tweet}}<br><br></td>
+    </tr>
+     {%endfor%} 
+  </tbody>
+</table>
+  </body>
+{% endblock content %}
