@@ -1,0 +1,9 @@
+{% extends "consultancy_portal/base.html" %}
+{% block content %}
+ <form method="post" action="{% url 'users:consultant_Register' %}" class ="form">
+ {% csrf_token %}
+ {{ form.as_p }}
+  <button name="submit" class="btn btn-primary">Register as consultant</button>
+ <input type="hidden" name="next" />
+ </form>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "consultancy_portal/base.html" %}
+{% block content %}
+ <form method="post" action="{% url 'users:register' %}" class ="form">
+ {% csrf_token %}
+ {{ form.as_p }}
+  <button name="submit" class="btn btn-primary">Resigter</button>
+ <input type="hidden" name="next" />
+ </form>
+  <p> Login as a ?<a href="{% url 'users:consultant_login'%}">consultant </a>
+ <p> Register as a ?<a href="{% url 'users:consultant_Register'%}">consultant </a>
+{% endblock content %}

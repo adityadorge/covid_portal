@@ -1,0 +1,16 @@
+{% extends "consultancy_portal/base.html" %}
+{% block header %}
+ <h2>Log in to your account.</h2>
+{% endblock header %}
+{% if form.errors %}
+ <p>Your username and password didn't match. Please try again.</p>
+ {% endif %}
+{% block content %}
+<form method="post" action="{% url 'users:consultant_login' %}" class="form">
+ {% csrf_token %}
+ {{form.as_p }}
+ <button name="submit" class="btn btn-primary">log in</button>
+<input type="hidden" name="next" value="{% url 'users:consultancy_index' %}" />
+ </form> 
+ <p>Don't have an account? <a href="{% url 'users:register' %}">Signup here</a></p>
+ {% endblock content %}
