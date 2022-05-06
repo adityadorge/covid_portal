@@ -40,6 +40,10 @@
         "patterns":"Can people with mild COVID-19 symptoms recover at home?",
         "responses":" People with mild symptoms who are otherwise healthy should manage their symptoms at home. On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days."
       },
+      { "tag":"covid4",
+        "patterns":"which vaccines are approved by WHO for covid -19?",
+        "responses":"Pfizer/BioNTech , Bharat Biotech - Covaxin . Serum Institute of India - Covishield"
+      },
       {
         "tag": "goodbye",
         "patterns": [
